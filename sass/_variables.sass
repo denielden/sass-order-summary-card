@@ -1,0 +1,31 @@
+$bg: hsl(225, 100%, 94%)
+$bg-light: hsl(225, 100%, 98%)
+$white: #fff
+$grey: hsl(224, 23%, 55%)
+$blue: hsl(245, 75%, 52%)
+$dark-blue: hsl(223, 47%, 23%)
+
+$m2: 1.8rem
+$round: .8rem
+
+@mixin bodyBg($url)
+   background: url($url) no-repeat top center
+   background-size: contain
+   background-color: $bg
+
+@mixin font
+   font-family: 'Red Hat Display', sans-serif
+   font-size: 1rem
+   font-weight: 500
+   color: $grey
+
+@mixin dFlex
+   display: flex
+   justify-content: center
+   align-items: center
+
+@mixin shadow
+   box-shadow: 0 1rem 1.5rem rgba($dark-blue, .2)
+
+@mixin cursor
+   cursor: pointer
