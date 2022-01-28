@@ -5,14 +5,12 @@
    margin: 0
    border: 0
    outline: none
-
 body
    @include bodyBg('../img/pattern-background-desktop.svg')
    @include font
 main
    height: 100vh
    @include dFlex
-   
 h1
    font-size: 1.75rem
    margin-bottom: 1rem
@@ -21,11 +19,11 @@ h1, a, strong, button
    color: $dark-blue
 a
    color: $blue
+   transition: .2s ease
    @include cursor
    &:hover
       color: $blue
       opacity: .65
-   
 .card
    width: 26rem
    text-align: center
@@ -62,6 +60,7 @@ a
       button
          width: 100%
          border-radius: $round
+         transition: .2s ease
          @include cursor
          &[type="submit"]
             margin-bottom: $m2
@@ -79,11 +78,46 @@ a
                color: $dark-blue
             
 .attribution
-   position: absolute
-   left: 0
+   display: block
+   position: fixed
+   right: 1rem
    bottom: 1rem
-   width: 100vw
-   text-align: center
+   background-image: url('https://avatars.githubusercontent.com/u/75424016?v=4')
+   background-size: 100%
+   height: 4rem
+   width: 4rem
+   border-radius: 100%
+   z-index: 99
+   small
+      visibility: hidden
+      position: fixed
+      bottom: 4.5rem
+      right: 5rem
+      width: 12.5rem
+      padding: .5rem 1rem
+      border-radius: 1rem 1rem 0
+      background-color: $bg-light
+      z-index: 999
+      @include shadow
+      transform: rotateX(90deg)
+      transition: .8s cubic-bezier(.06, .8, .1, 1)
+   &:hover small
+      visibility: visible
+      transform: rotateX(0)
+
+@media screen and (max-width: 800px)
+   .attribution
+      height: 3.5rem
+      width: 3.5rem
+      bottom: 4rem
+      right: .8rem
+      small
+         visibility: visible
+         bottom: .4rem
+         right: 2.5rem
+         width: 13rem
+         border-radius: 1rem 0 1rem 1rem
+         transform: rotateX(0)
 
 @media screen and (max-width: 480px)
    body
@@ -91,6 +125,7 @@ a
       padding: 0 1.5rem
 
    .card
+      margin-bottom: 4rem
       p
          padding: 0
       .card-content
