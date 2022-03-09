@@ -16,7 +16,7 @@ body {
 }
 
 main {
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,6 +48,15 @@ a {
 a:hover {
   color: #3829e0;
   opacity: .65;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background: url("../img/pattern-background-mobile.svg") no-repeat top center;
+    background-size: contain;
+    background-color: #e0e8ff;
+    padding: 0 1.5rem;
+  }
 }
 
 .card {
@@ -152,6 +161,24 @@ a:hover {
   color: #1f2f56;
 }
 
+@media screen and (max-width: 480px) {
+  .card {
+    margin-bottom: 4rem;
+  }
+  .card p {
+    padding: 0;
+  }
+  .card .card-content {
+    padding: 1.5rem;
+  }
+  .card .card-content .card-summary {
+    padding: 1rem;
+  }
+  .card .card-content .card-summary .card-plan p {
+    padding: 0 1.2rem;
+  }
+}
+
 .attribution {
   display: block;
   position: fixed;
@@ -204,30 +231,6 @@ a:hover {
     border-radius: 1rem 0 1rem 1rem;
     -webkit-transform: rotateX(0);
             transform: rotateX(0);
-  }
-}
-
-@media screen and (max-width: 480px) {
-  body {
-    background: url("../img/pattern-background-mobile.svg") no-repeat top center;
-    background-size: contain;
-    background-color: #e0e8ff;
-    padding: 0 1.5rem;
-  }
-  .card {
-    margin-bottom: 4rem;
-  }
-  .card p {
-    padding: 0;
-  }
-  .card .card-content {
-    padding: 1.5rem;
-  }
-  .card .card-content .card-summary {
-    padding: 1rem;
-  }
-  .card .card-content .card-summary .card-plan p {
-    padding: 0 1.2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

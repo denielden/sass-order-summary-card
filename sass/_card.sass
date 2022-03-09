@@ -1,0 +1,64 @@
+.card
+   width: 26rem
+   text-align: center
+   border-radius: $round
+   @include shadow
+   overflow: hidden
+   img
+      width: 100%
+      margin-bottom: -.3rem
+   p
+      padding: 0 1rem
+   .card-content
+      background: $white
+      padding: 2rem
+      .card-summary
+         @include flex
+         justify-content: space-between
+         background: $bg-light
+         padding: 1rem $m2
+         margin: $m2 0
+         text-align: left
+         line-height: 1.6rem
+         border-radius: $round
+         .card-plan
+            @include flex
+            justify-content: flex-start
+            img
+               width: 2.8rem
+            p
+               padding: 0 1.5rem
+         a
+            font-size: .85rem
+
+      button
+         width: 100%
+         border-radius: $round
+         transition: .2s ease
+         @include cursor
+         &[type="submit"]
+            margin-bottom: $m2
+            padding: 1rem
+            background-color: $blue
+            color: $white
+            @include shadow
+            &:hover
+               opacity: .65
+         &[type="reset"]
+            margin-bottom: .8rem
+            background: transparent
+            color: $grey
+            &:hover
+               color: $dark-blue
+            
+@media screen and (max-width: 480px)
+   .card
+      margin-bottom: 4rem
+      p
+         padding: 0
+      .card-content
+         padding: 1.5rem
+         .card-summary
+            padding: 1rem
+            .card-plan p
+                  padding: 0 1.2rem
